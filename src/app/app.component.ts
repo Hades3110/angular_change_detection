@@ -11,6 +11,8 @@ export class AppComponent implements OnInit{
   numbers = {
     count: 0
   }
+  constructor() {
+  }
   ngOnInit(): void {
     setInterval(() => {
       this.numbers.count++

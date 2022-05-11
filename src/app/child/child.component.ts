@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input,  ChangeDetectorRef} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input,  ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -8,9 +8,9 @@ import {ChangeDetectionStrategy, Component, Input,  ChangeDetectorRef} from '@an
 })
 export class ChildComponent {
 
-  constructor(private cd: ChangeDetectorRef) { }
+  @Input() numbers: { count: number }
 
-  @Input() numbers!: { count: number }
+  constructor(private cd: ChangeDetectorRef) { }
 
   update(){
     this.cd.detectChanges();

@@ -8,11 +8,11 @@ import { ChangeDetectionStrategy, Component, Input,  ChangeDetectorRef } from '@
 })
 export class ChildComponent {
 
-  @Input() numbers: { count: number }
+  @Input() numbers!: { count: number }
 
   constructor(private cd: ChangeDetectorRef) { }
 
-  update(){
+  update(): void{
     this.cd.detectChanges();
   }
 
